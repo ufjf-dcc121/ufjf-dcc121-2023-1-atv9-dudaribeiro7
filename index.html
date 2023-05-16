@@ -24,7 +24,12 @@
             <br>
             <div>
                 <label for="idade">Idade:</label>
-                <input type="text" name="idade">
+                <input type="number" name="idade">
+            </div>
+            <br>
+            <div>
+                <label for="nascimento">Data de Nascimento:</label>
+                <input type="date" name="nascimento">
             </div>
             <br>
             <div>
@@ -43,6 +48,8 @@
         function aoEnviar(e){
             e.preventDefault();
             console.log("Hello, form!");
+            const nomeCompleto = `${form.nome.value} ${form.sobrenome.value}, ${form.idade.value} anos`;
+            console.log(nomeCompleto);
         }
     </script>
     
